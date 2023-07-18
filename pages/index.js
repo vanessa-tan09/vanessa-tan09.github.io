@@ -54,62 +54,52 @@ export default function Home() {
           <h2 className=" text-3xl my-5 font-heading text-palette-pink">Projects</h2>
 
           {/* Brewcipe */}
-          <div className=" pl-5 relative w-full">
-            <h3 className=" text-xl mb-1 font-heading text-palette-blue-700">Brewcipe (Fullstack Developer)</h3>
-            <p className=' text-gray-900 font-bold'>
-            Brewcipe is a coffee recipe sharing app. Try out new recipes from fellow coffee aficionados. Or share your own delicious recipe for others to try out.</p>
-            <ul className=" pl-5 text-gray-900">
-              <li><text className="font-bold">Search:</text> Search for recipes or users by entering keywords in the search bar.</li>
-              <li><text className="font-bold">Share recipe:</text> Make your own recipe and share it to fellow coffee enthusiasts.</li>
-              <li><text className="font-bold">Bookmark recipe:</text> Found a good recipe you want to try out? Bookmark it to easily find it later.</li>
-              <li><text className="font-bold">Comment:</text> Share your thoughts about the recipe to the community.</li>
-              <li><text className="font-bold">Like and dislike:</text> Show your approval (or disapproval) for the recipe or comment.</li>
-            </ul>
-            <Carousel className="rounded-xl w-full"
-              prevArrow={({ handlePrev }) => (
-              <IconButton variant="text" size="lg" onClick={handlePrev} className="!absolute top-2/4 -translate-y-2/4 left-4 text-palette-gray"> 
-                <HiArrowSmLeft className="w-6 h-6"/>
-              </IconButton>)}
-              
-              nextArrow={({ handleNext }) => (
-              <IconButton variant="text" size="lg" onClick={handleNext} className="!absolute top-2/4 -translate-y-2/4 !right-4 text-palette-gray"> 
-                <HiArrowSmRight className="w-6 h-6"/>
-              </IconButton>)}
+          <div className="relative w-full bg-palette-beige-brown rounded-xl shadow-lg mb-5 pb-5">
+            <Carousel className="rounded-t-xl w-full"
+                prevArrow={({ handlePrev }) => (
+                <IconButton variant="text" size="lg" onClick={handlePrev} className="!absolute top-2/4 -translate-y-2/4 left-4 text-palette-gray"> 
+                  <HiArrowSmLeft className="w-6 h-6"/>
+                </IconButton>)}
+                
+                nextArrow={({ handleNext }) => (
+                <IconButton variant="text" size="lg" onClick={handleNext} className="!absolute top-2/4 -translate-y-2/4 !right-4 text-palette-gray"> 
+                  <HiArrowSmRight className="w-6 h-6"/>
+                </IconButton>)}
 
-              navigation={({ setActiveIndex, activeIndex, length }) => (
-                      <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-                        {new Array(length).fill("").map((_, i) => (
-                          <span
-                            key={i}
-                            className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                              activeIndex === i ? "bg-palette-blue-500 w-8" : " bg-palette-gray w-4"
-                            }`}
-                            onClick={() => setActiveIndex(i)}
-                          /> ))}
-                      </div> )}
-            >
-              <img src="project_images/Brewcipe_1.png" alt="Budget Builder" className="w-full object-cover"/>
-              <img src="project_images/Brewcipe_2.png" alt="Budget Builder" className="w-full object-cover"/>
-              <img src="project_images/Brewcipe_3.png" alt="Budget Builder" className="w-full object-cover"/>
-              <img src="project_images/Brewcipe_4.png" alt="Budget Builder" className="w-full object-cover"/>
-              <img src="project_images/Brewcipe_5.png" alt="Budget Builder" className="w-full object-cover"/>
-            </Carousel>
-            <hr className="h-1 my-10 bg-palette-pink border-0 rounded dark:bg-gray-700"/>
+                navigation={({ setActiveIndex, activeIndex, length }) => (
+                        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                          {new Array(length).fill("").map((_, i) => (
+                            <span
+                              key={i}
+                              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                                activeIndex === i ? "bg-palette-blue-500 w-8" : " bg-palette-gray w-4"
+                              }`}
+                              onClick={() => setActiveIndex(i)}
+                            /> ))}
+                        </div> )}
+              >
+                <img src="project_images/Brewcipe_1.png" alt="Budget Builder" className="w-full object-cover"/>
+                <img src="project_images/Brewcipe_2.png" alt="Budget Builder" className="w-full object-cover"/>
+                <img src="project_images/Brewcipe_3.png" alt="Budget Builder" className="w-full object-cover"/>
+                <img src="project_images/Brewcipe_4.png" alt="Budget Builder" className="w-full object-cover"/>
+                <img src="project_images/Brewcipe_5.png" alt="Budget Builder" className="w-full object-cover"/>
+              </Carousel>
+
+              <h3 className="px-5 text-xl mt-5 mb-1 font-heading text-palette-blue-700">Brewcipe (Fullstack Developer)</h3>
+              <p className='px-5 text-gray-900 font-bold'>
+              Brewcipe is a coffee recipe sharing app. Try out new recipes from fellow coffee aficionados. Or share your own delicious recipe for others to try out.</p>
+              <ul className=" px-10 text-gray-900">
+                <li><text className="font-bold">Search:</text> Search for recipes or users by entering keywords in the search bar.</li>
+                <li><text className="font-bold">Share recipe:</text> Make your own recipe and share it to fellow coffee enthusiasts.</li>
+                <li><text className="font-bold">Bookmark recipe:</text> Found a good recipe you want to try out? Bookmark it to easily find it later.</li>
+                <li><text className="font-bold">Comment:</text> Share your thoughts about the recipe to the community.</li>
+                <li><text className="font-bold">Like and dislike:</text> Show your approval (or disapproval) for the recipe or comment.</li>
+              </ul>
           </div>
 
           {/* Budget Builder */}
-          <div className=" pl-5 relative w-full">
-            <h3 className=" text-xl mb-1 font-heading text-palette-blue-700">Budget Builder (Fullstack Developer)</h3>
-            <p className=' text-gray-900 font-bold'>
-            Budget Builder is a gamified budgeting app. Build and decorate your in-app room by meeting your daily budgeting target.</p>
-            <ul className=" pl-5 text-gray-900">
-              <li><text className="font-bold">Set Budget:</text> The user is able to set a minimum amount of money deemed as the budget for a timeframe they choose. These timeframes are DAILY and MONTHLY.</li>
-              <li><text className="font-bold">Add Expense:</text> Within a day, a user can take note of their expenses and record it into the app.</li>
-              <li><text className="font-bold">See Charts:</text> Various charts (such as pie charts) will be shown to give the user a clear visual on their spending habits.</li>
-              <li><text className="font-bold">Decorate Rooms:</text> Upon reaching a budget goal, the user is awarded in-game coins. These coins can be used to acquire furniture to decorate the virtual room.</li>
-            </ul>
-            <Carousel className="rounded-xl w-full"
-              
+          <div className="relative w-full bg-palette-beige-brown rounded-xl shadow-lg mb-5 pb-5 mt-10">
+            <Carousel className="rounded-t-xl w-full"
               prevArrow={({ handlePrev }) => (
               <IconButton variant="text" size="lg" onClick={handlePrev} className="!absolute top-2/4 -translate-y-2/4 left-4 text-palette-gray"> 
                 <HiArrowSmLeft className="w-6 h-6"/>
@@ -137,52 +127,61 @@ export default function Home() {
               <img src="project_images/Budget_Builder_3.png" alt="Budget Builder" className="w-full object-cover"/>
               <img src="project_images/Budget_Builder_4.png" alt="Budget Builder" className="w-full object-cover"/>
             </Carousel>
-            <hr className="h-1 my-10 bg-palette-pink border-0 rounded dark:bg-gray-700"/>
+
+            <h3 className="px-5 text-xl mt-5 mb-1 font-heading text-palette-blue-700">Budget Builder (Fullstack Developer)</h3>
+            <p className=' px-5 text-gray-900 font-bold'>
+            Budget Builder is a gamified budgeting app. Build and decorate your in-app room by meeting your daily budgeting target.</p>
+            <ul className=" px-10 text-gray-900">
+              <li><text className="font-bold">Set Budget:</text> The user is able to set a minimum amount of money deemed as the budget for a timeframe they choose. These timeframes are DAILY and MONTHLY.</li>
+              <li><text className="font-bold">Add Expense:</text> Within a day, a user can take note of their expenses and record it into the app.</li>
+              <li><text className="font-bold">See Charts:</text> Various charts (such as pie charts) will be shown to give the user a clear visual on their spending habits.</li>
+              <li><text className="font-bold">Decorate Rooms:</text> Upon reaching a budget goal, the user is awarded in-game coins. These coins can be used to acquire furniture to decorate the virtual room.</li>
+            </ul>
           </div>
 
           {/* DCC Digital Archives */}
-          <div className=" pl-5 relative w-full">
-            <h3 className=" text-xl mb-1 font-heading text-palette-blue-700">DCC Digital Archives (Quality Assurance Lead)</h3>
-            <p className=' text-gray-900 font-bold'>
+          <div className="relative w-full bg-palette-beige-brown rounded-xl shadow-lg mb-5 pb-5 mt-10">
+            <Carousel className="rounded-t-xl w-full"
+                prevArrow={({ handlePrev }) => (
+                <IconButton variant="text" size="lg" onClick={handlePrev} className="!absolute top-2/4 -translate-y-2/4 left-4 text-palette-gray"> 
+                  <HiArrowSmLeft className="w-6 h-6"/>
+                </IconButton>)}
+                
+                nextArrow={({ handleNext }) => (
+                <IconButton variant="text" size="lg" onClick={handleNext} className="!absolute top-2/4 -translate-y-2/4 !right-4 text-palette-gray"> 
+                  <HiArrowSmRight className="w-6 h-6"/>
+                </IconButton>)}
+
+                navigation={({ setActiveIndex, activeIndex, length }) => (
+                        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                          {new Array(length).fill("").map((_, i) => (
+                            <span
+                              key={i}
+                              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                                activeIndex === i ? "bg-palette-blue-500 w-8" : " bg-palette-gray w-4"
+                              }`}
+                              onClick={() => setActiveIndex(i)}
+                            /> ))}
+                        </div> )}
+              >
+                <img src="project_images/DCC_1.png" alt="Budget Builder" className="w-full object-cover"/>
+                <img src="project_images/DCC_2.png" alt="Budget Builder" className="w-full object-cover"/>
+                <img src="project_images/DCC_3.png" alt="Budget Builder" className="w-full object-cover"/>
+                <img src="project_images/DCC_4.png" alt="Budget Builder" className="w-full object-cover"/>
+            </Carousel>
+
+            <h3 className="px-5 text-xl mt-5 mb-1 font-heading text-palette-blue-700">DCC Digital Archives (Quality Assurance Lead)</h3>
+            <p className='px-5 text-gray-900 font-bold'>
             DCC Digital Archives is a tool that enables the Disciples Christian Church to store their records conveniently and safely. Church administrators are able to easily add and retrieve records with little to no training since the application was designed to closely resemble their manual workflow.
             </p>
-            <ul className=" pl-5 text-gray-900">
+            <ul className=" px-10 text-gray-900">
               <li><text className="font-bold">Security roles:</text> Users are required to log in before they can access the database. Roles for each user and the authorization matrix are determined and created by the administrator. </li>
               <li><text className="font-bold">View records:</text> An authorized user can view membership, wedding, dedication, and baptism records.</li>
               <li><text className="font-bold">Add, edit, delete records:</text> An authorized user can add, edit, and delete membership, wedding, dedication, and baptism records. </li>
               <li><text className="font-bold">Search records:</text> An authorized user can search existing records in the database using advanced search fields.</li>
               <li><text className="font-bold">Export records:</text> An authorized user can export existing records into excel, csv, or pdf formats.</li>
             </ul>
-            <Carousel className="rounded-xl w-full"
-              
-              prevArrow={({ handlePrev }) => (
-              <IconButton variant="text" size="lg" onClick={handlePrev} className="!absolute top-2/4 -translate-y-2/4 left-4 text-palette-gray"> 
-                <HiArrowSmLeft className="w-6 h-6"/>
-              </IconButton>)}
-              
-              nextArrow={({ handleNext }) => (
-              <IconButton variant="text" size="lg" onClick={handleNext} className="!absolute top-2/4 -translate-y-2/4 !right-4 text-palette-gray"> 
-                <HiArrowSmRight className="w-6 h-6"/>
-              </IconButton>)}
-
-              navigation={({ setActiveIndex, activeIndex, length }) => (
-                      <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-                        {new Array(length).fill("").map((_, i) => (
-                          <span
-                            key={i}
-                            className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                              activeIndex === i ? "bg-palette-blue-500 w-8" : " bg-palette-gray w-4"
-                            }`}
-                            onClick={() => setActiveIndex(i)}
-                          /> ))}
-                      </div> )}
-            >
-              <img src="project_images/DCC_1.png" alt="Budget Builder" className="w-full object-cover"/>
-              <img src="project_images/DCC_2.png" alt="Budget Builder" className="w-full object-cover"/>
-              <img src="project_images/DCC_3.png" alt="Budget Builder" className="w-full object-cover"/>
-              <img src="project_images/DCC_4.png" alt="Budget Builder" className="w-full object-cover"/>
-            </Carousel>
-            <hr className="h-1 my-10 bg-palette-pink border-0 rounded dark:bg-gray-700"/>
+            
           </div>
         </section>
 

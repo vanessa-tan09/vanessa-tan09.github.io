@@ -11,7 +11,7 @@ module.exports = withMT({
     extend: {
       colors: {
         'palette-beige': '#EEE2DC',
-        'palette-beige-brown': '#EDC7B7',
+        'palette-beige-brown': '#e4d7d0',
         'palette-gray': '#BAB2B5',
         'palette-blue': {
           500: '#123C69',
