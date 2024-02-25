@@ -86,6 +86,7 @@ export default function Home() {
               </Carousel>
 
               <h3 className="px-5 text-xl mt-5 mb-1 font-heading text-palette-blue-700">Brewcipe (Fullstack Developer)</h3>
+              <p className="px-5 mb-1 text-sm text-gray-900 font-bold"><i>Built using: Javascript, HTML, CSS, Bootstrap, MongoDB</i></p>
               <p className='px-5 text-gray-900 font-bold'>
               Brewcipe is a coffee recipe sharing app. Try out new recipes from fellow coffee aficionados. Or share your own delicious recipe for others to try out.</p>
               <ul className=" px-10 text-gray-900">
@@ -129,6 +130,7 @@ export default function Home() {
             </Carousel>
 
             <h3 className="px-5 text-xl mt-5 mb-1 font-heading text-palette-blue-700">Budget Builder (Fullstack Developer)</h3>
+            <p className="px-5 mb-1 text-sm text-gray-900 font-bold"><i>Built using: Kotlin, SQLite</i></p>
             <p className=' px-5 text-gray-900 font-bold'>
             Budget Builder is a gamified budgeting app. Build and decorate your in-app room by meeting your daily budgeting target.</p>
             <ul className=" px-10 text-gray-900">
@@ -171,6 +173,8 @@ export default function Home() {
             </Carousel>
 
             <h3 className="px-5 text-xl mt-5 mb-1 font-heading text-palette-blue-700">DCC Digital Archives (Quality Assurance Lead)</h3>
+            <p className="px-5 mb-1 text-sm text-gray-900 font-bold"><i>Built using: JavaScript, NodeJs, SQLite, HTML, CSS, Bootstrap</i></p>
+            <p className=' px-5 text-gray-900 font-bold'></p>
             <p className='px-5 text-gray-900 font-bold'>
             DCC Digital Archives is a tool that enables the Disciples Christian Church to store their records conveniently and safely. Church administrators are able to easily add and retrieve records with little to no training since the application was designed to closely resemble their manual workflow.
             </p>
